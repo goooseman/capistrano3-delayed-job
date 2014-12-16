@@ -3,7 +3,7 @@
 This Capistrano (v3) task ask for the delayedjob management. To use it be sure that you have
 ```
 gem "daemons"
-gem "delayedjob"
+gem "delayed_job" or gem "delayed_job_active_record" or any other
 ```
 
 You can use
