@@ -42,7 +42,7 @@ And then execute:
 
     $ bundle
 
-And then add ``` require 'capistrano3/delayed-job' ``` to your ``` Capfile ```
+And then add ``` require 'capistrano/delayed-job' ``` to your ``` Capfile ```
 
 ## My other works
 
