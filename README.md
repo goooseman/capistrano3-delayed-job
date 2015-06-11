@@ -1,24 +1,30 @@
 # capistrano3-delayed-job
 
-This Capistrano (v3) task ask for the delayedjob management. To use it be sure that you have
+This Capistrano (v3) task ask for the delayed_job gem management. To use it be sure that you have
+
 ```
 gem "daemons"
 gem "delayed_job" or gem "delayed_job_active_record" or any other
 ```
 
 You can use
+
 ```
 delayed_job:start
 delayed_job:stop
 delayed_job:restart
 ```
+
 after [installation](#installation).
 
-*Rails 3 users* - make sure you ``` set :delayed_job_folder, 'scripts' ``` in your ``` config/deploy.rb ```. Rails 4 users - no need to worry, it uses 'bin' by default.
+**Rails 3 users** - make sure you `set :delayed_job_folder, 'scripts'` in your `config/deploy.rb`.
 
-You can ``` set :delayed_job_args, '' ``` and ``` set :delayed_job_server_role ``` in ypur ``` config/deploy.rb ```
+Rails 4 users - no need to worry, it uses `'bin'` by default.
 
-You can use it like this in your deploy.rb:
+You can `set :delayed_job_args, ''` and `set :delayed_job_server_role` in your `config/deploy.rb`
+
+You can use it like this in your `deploy.rb`:
+
 ``` ruby
 after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do
@@ -34,15 +40,15 @@ Add this line to your application's Gemfile:
 
 ```ruby
 group :development do
-	gem 'capistrano3-delayed-job'
+  gem 'capistrano3-delayed-job'
 end
 ```
 
-And then execute:
+Install with bundler:
 
     $ bundle
 
-And then add ``` require 'capistrano3/delayed-job' ``` to your ``` Capfile ```
+And then add `require 'capistrano3/delayed-job'` to your `Capfile`.
 
 ## My other works
 
